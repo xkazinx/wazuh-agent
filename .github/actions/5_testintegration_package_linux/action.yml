@@ -14,9 +14,9 @@ runs:
       shell: bash
       run: |
         sudo docker run \
-          -v $GITHUB_WORKSPACE/.github/actions/5_testintegration_package_linux/:/tests \
+          -v $GITHUB_WORKSPACE/.github/actions/test-install-components/:/tests \
           -v /tmp/:/packages \
-          --entrypoint '/5_testintegration_package_linux/install_component.sh' ${{ inputs.tested_docker }}
+          --entrypoint '/test-install-components/install_component.sh' ${{ inputs.tested_docker }}
         
     - name: Check test result
       shell: bash
